@@ -41,10 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AGC\DirectAGC.cs" />
     <Compile Include="Generators\BaseGenerator.cs" />
     <Compile Include="Generators\RectGenerator.cs" />
     <Compile Include="Generators\SineGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AIFrameworkOpen\AI\AI.csproj">
+      <Project>{5bb9b8ac-9906-4fd7-a8e6-5eb202fb57a1}</Project>
+      <Name>AI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
