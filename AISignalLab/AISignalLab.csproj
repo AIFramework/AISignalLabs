@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AGC\CustomAGC\CombineAGC.cs" />
+    <Compile Include="AGC\CustomAGC\MinCombineAGC.cs" />
     <Compile Include="AGC\CustomAGC\LogAGC.cs" />
     <Compile Include="AGC\DirectAGC.cs" />
     <Compile Include="AGC\filters.Designer.cs" />

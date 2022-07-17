@@ -9,8 +9,11 @@ namespace AI.SignalLab.AGC.CustomAGC
     /// <summary>
     /// Комбинированная АРУ, с целю сгладить переходной процесс
     /// </summary>
-    public class CombineAGC : IAGC
+    public class MinCombineAGC : IAGC
     {
+        /// <summary>
+        /// Ограничение уровня сигнала в АРУ
+        /// </summary>
         public double TresholdAGC 
         {
             get 
@@ -23,6 +26,10 @@ namespace AI.SignalLab.AGC.CustomAGC
                 AGC2.TresholdAGC = value;
             }
         }
+
+        /// <summary>
+        /// Ограничение уровня сигнала в фильтре
+        /// </summary>
         public double TresholdFilter
         {
             get
@@ -39,14 +46,14 @@ namespace AI.SignalLab.AGC.CustomAGC
         public IAGC AGC1{ get; set; }
         public IAGC AGC2 { get; set; }
 
-        public CombineAGC()
+        public MinCombineAGC()
         {
             AGC1 = new DirectAGC();
             AGC2 = new LogAGC();
             TresholdAGC = 4;
         }
 
-        public CombineAGC(IAGC agc1, IAGC agc2, double tresholdAGC = 4)
+        public MinCombineAGC(IAGC agc1, IAGC agc2, double tresholdAGC = 4)
         {
             AGC1 = agc1;
             AGC2 = agc2;
