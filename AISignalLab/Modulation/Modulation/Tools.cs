@@ -8,7 +8,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AI.SignalLab.Modulation.Molation
+namespace AI.SignalLab.Modulation.Modulation
 {
     public class ModulationBitsTools
     {
