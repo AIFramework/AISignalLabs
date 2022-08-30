@@ -80,13 +80,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AIFrameworkOpen\AI\AI.csproj">
-      <Project>{fb923730-ebd8-41c8-ba6b-3f1188ce14a8}</Project>
-      <Name>AI</Name>
+    <ProjectReference Include="..\..\AIFrameworkOpen\AIChartCV\AIChartCV.csproj">
+      <Project>{2ed3435f-f827-41e2-82b4-ed781a16b156}</Project>
+      <Name>AIChartCV</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AISignalLab\AISignalLab.csproj">
-      <Project>{a94443b7-4b84-4a15-b16c-09474bc5e432}</Project>
-      <Name>AISignalLab</Name>
+    <ProjectReference Include="..\..\AIFrameworkOpen\AICrossPlatform\AICrossPlatform.csproj">
+      <Project>{0dc34381-b4cb-42d7-ba8c-86d78a1b8cc6}</Project>
+      <Name>AICrossPlatform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AI.SignalLabs\AI.SignalLabs.csproj">
+      <Project>{1e7c8e03-0322-4e8d-afa8-04f99b52d1c4}</Project>
+      <Name>AI.SignalLabs</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
