@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\AIFrameworkOpen\AICrossPlatform\AICrossPlatform.csproj" />
+    <ProjectReference Include="..\..\AIFrameworkOpen\src\AICrossPlatform\AICrossPlatform.csproj" />
   </ItemGroup>
 
 </Project>
