@@ -80,12 +80,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AIFrameworkOpen\AIChartCV\AIChartCV.csproj">
+    <ProjectReference Include="..\..\AIFrameworkOpen\src\AIChartCV\AIChartCV.csproj">
       <Project>{2ed3435f-f827-41e2-82b4-ed781a16b156}</Project>
       <Name>AIChartCV</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\AIFrameworkOpen\AICrossPlatform\AICrossPlatform.csproj">
-      <Project>{0dc34381-b4cb-42d7-ba8c-86d78a1b8cc6}</Project>
+    <ProjectReference Include="..\..\AIFrameworkOpen\src\AICrossPlatform\AICrossPlatform.csproj">
+      <Project>{baaae403-08b6-40b6-aa9f-8532ff8eae63}</Project>
       <Name>AICrossPlatform</Name>
     </ProjectReference>
     <ProjectReference Include="..\AI.SignalLabs\AI.SignalLabs.csproj">

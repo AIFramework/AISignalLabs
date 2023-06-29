@@ -13,6 +13,7 @@ using System.Windows.Forms;
 
 namespace ModulationTest
 {
+    // Прокис, Скляр
     public partial class Form1 : Form
     {
         double sr = 144.1e+3;// Частота дискретизации
