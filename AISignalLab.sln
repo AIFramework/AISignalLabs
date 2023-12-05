@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AICrossPlatform", "..\AIFra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIChartCV", "..\AIFrameworkOpen\src\AIChartCV\AIChartCV.csproj", "{2ED3435F-F827-41E2-82B4-ED781A16B156}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QAM8", "QAM8\QAM8.csproj", "{2B3F559E-2E7C-43C2-82C0-F8726B9B6161}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2ED3435F-F827-41E2-82B4-ED781A16B156}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ED3435F-F827-41E2-82B4-ED781A16B156}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ED3435F-F827-41E2-82B4-ED781A16B156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B3F559E-2E7C-43C2-82C0-F8726B9B6161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B3F559E-2E7C-43C2-82C0-F8726B9B6161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B3F559E-2E7C-43C2-82C0-F8726B9B6161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B3F559E-2E7C-43C2-82C0-F8726B9B6161}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -70,7 +70,7 @@ namespace AI.SignalLab.Modulation.Modulation
         /// Конвертирование из obj в массив байт
         /// URL: https://stackoverflow.com/questions/4865104/convert-any-object-to-a-byte
         /// </summary>
-        static byte[] Obj2Bytes(object obj)
+        public static byte[] Obj2Bytes(object obj)
         {
             if (obj == null)
                 return null;
