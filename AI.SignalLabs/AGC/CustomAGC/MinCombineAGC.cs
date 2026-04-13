@@ -1,70 +1,65 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AI.SignalLab.AGC.CustomAGC
+namespace AI.SignalLab.AGC.CustomAGC;
+
+/// <summary>
+/// Комбинированная АРУ, с целю сгладить переходной процесс
+/// </summary>
+public class MinCombineAGC : IAGC
 {
     /// <summary>
-    /// Комбинированная АРУ, с целю сгладить переходной процесс
+    /// Ограничение уровня сигнала в АРУ
     /// </summary>
-    public class MinCombineAGC : IAGC
+    public double TresholdAGC 
     {
-        /// <summary>
-        /// Ограничение уровня сигнала в АРУ
-        /// </summary>
-        public double TresholdAGC 
+        get 
         {
-            get 
-            {
-                return AGC1.TresholdAGC;
-            }
-            set 
-            {
-                AGC1.TresholdAGC = value;
-                AGC2.TresholdAGC = value;
-            }
+            return AGC1.TresholdAGC;
         }
-
-        /// <summary>
-        /// Ограничение уровня сигнала в фильтре
-        /// </summary>
-        public double TresholdFilter
+        set 
         {
-            get
-            {
-                return AGC1.TresholdFilter;
-            }
-            set
-            {
-                AGC1.TresholdFilter = value;
-                AGC2.TresholdFilter = value;
-            }
+            AGC1.TresholdAGC = value;
+            AGC2.TresholdAGC = value;
         }
+    }
 
-        public IAGC AGC1{ get; set; }
-        public IAGC AGC2 { get; set; }
-
-        public MinCombineAGC()
+    /// <summary>
+    /// Ограничение уровня сигнала в фильтре
+    /// </summary>
+    public double TresholdFilter
+    {
+        get
         {
-            AGC1 = new DirectAGC();
-            AGC2 = new LogAGC();
-            TresholdAGC = 4;
+            return AGC1.TresholdFilter;
         }
-
-        public MinCombineAGC(IAGC agc1, IAGC agc2, double tresholdAGC = 4)
+        set
         {
-            AGC1 = agc1;
-            AGC2 = agc2;
-            TresholdAGC = tresholdAGC;
+            AGC1.TresholdFilter = value;
+            AGC2.TresholdFilter = value;
         }
+    }
 
-        public double Calculate(double value)
-        {
-            double out1 = AGC1.Calculate(value);
-            double out2 = AGC2.Calculate(value);
-            return Math.Abs(out1)> Math.Abs(out2)? out2:out1;
-        }
+    public IAGC AGC1{ get; set; }
+    public IAGC AGC2 { get; set; }
+
+    public MinCombineAGC()
+    {
+        AGC1 = new DirectAGC();
+        AGC2 = new LogAGC();
+        TresholdAGC = 4;
+    }
+
+    public MinCombineAGC(IAGC agc1, IAGC agc2, double tresholdAGC = 4)
+    {
+        AGC1 = agc1;
+        AGC2 = agc2;
+        TresholdAGC = tresholdAGC;
+    }
+
+    public double Calculate(double value)
+    {
+        double out1 = AGC1.Calculate(value);
+        double out2 = AGC2.Calculate(value);
+        return Math.Abs(out1)> Math.Abs(out2)? out2:out1;
     }
 }

@@ -1,15 +1,15 @@
-using AI.DataStructs.Algebraic;
+﻿using AI.DataStructs.Algebraic;
+using AI.DataStructs.WithComplexElements;
 using AI.SignalLab.Filters;
 using AI.SignalLab.Modulation.Demodulation;
 using AI.SignalLab.Modulation.Modulation;
 using AI.SignalLab.Modulation.Modulation.DigitalModulations;
 using System;
-using System.Windows.Forms;
 using System.Collections;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Numerics;
-using AI.DataStructs.WithComplexElements;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Windows.Forms;
 
 namespace ModulationTest
 {
@@ -24,7 +24,7 @@ namespace ModulationTest
         // SRRC-фильтры передатчика (отдельно для синфазного и квадратурного каналов)
         readonly RootRaisedCosineFilter _txSrrcI;
         readonly RootRaisedCosineFilter _txSrrcQ;
-        
+
         // Квадратурный демодулятор со SRRC
         readonly QudratureDemodulation _demod;
 
@@ -34,7 +34,7 @@ namespace ModulationTest
         public Form1()
         {
             InitializeComponent();
-            
+
             _txSrrcI = new RootRaisedCosineFilter(BitDuration, Sr, RollOff, SpanSymbols);
             _txSrrcQ = new RootRaisedCosineFilter(BitDuration, Sr, RollOff, SpanSymbols);
             _demod = new QudratureDemodulation(F0, Sr, BitDuration, RollOff, SpanSymbols);
@@ -76,8 +76,8 @@ namespace ModulationTest
             int totalDelay = txDelay + rxDelay;
 
             // 4. Символы -> Импульсы (Dirac) для I и Q каналов
-            Vector impulsesI = new Vector(mappedSymbols.Length * samplesPerSymbol + totalDelay + samplesPerSymbol);
-            Vector impulsesQ = new Vector(mappedSymbols.Length * samplesPerSymbol + totalDelay + samplesPerSymbol);
+            Vector impulsesI = new Vector((mappedSymbols.Length * samplesPerSymbol) + totalDelay + samplesPerSymbol);
+            Vector impulsesQ = new Vector((mappedSymbols.Length * samplesPerSymbol) + totalDelay + samplesPerSymbol);
 
             for (int i = 0; i < mappedSymbols.Length; i++)
             {
@@ -95,7 +95,7 @@ namespace ModulationTest
             {
                 double arg = 2 * Math.PI * F0 * i / Sr;
                 // s(t) = I(t)*cos(wt) + Q(t)*sin(wt)
-                modulated[i] = basebandI[i] * Math.Cos(arg) + basebandQ[i] * Math.Sin(arg);
+                modulated[i] = (basebandI[i] * Math.Cos(arg)) + (basebandQ[i] * Math.Sin(arg));
             }
 
             // 7. Демодуляция: полный IQ + точки созвездия
@@ -104,16 +104,17 @@ namespace ModulationTest
             // 8. Декодирование сигнала обратно в текст
             DecodeSignal(iqSymbols, bits.Length);
 
+            Vector x = Vector.SeqBeginsWithZero(1, modulated.Count);
+
             // --- Отображение ---
             chartVisual1.Clear();
-            chartVisual1.PlotBlack(modulated);
-            
+            chartVisual1.AddPlot(x, modulated, "Сигнал", width: 1);
+
             chartVisual2.Clear();
             chartVisual2.ScatterComplexPlane(iqSymbols);
 
-            Vector x = Vector.SeqBeginsWithZero(1, modulated.Count);
             chartVisual3.Clear();
-            chartVisual3.AddPlot(x, iqFull.RealVector,      "Синфазная составляющая (I)");
+            chartVisual3.AddPlot(x, iqFull.RealVector, "Синфазная составляющая (I)");
             chartVisual3.AddPlot(x, iqFull.ImaginaryVector, "Квадратурная составляющая (Q)");
         }
 

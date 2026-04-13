@@ -1,4 +1,4 @@
-namespace ModulationTest
+﻿namespace ModulationTest
 {
     partial class Form1
     {
@@ -33,42 +33,6 @@ namespace ModulationTest
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel1.Controls.Add(this.panelTop, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.chartVisual1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.chartVisual2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.chartVisual3, 1, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1184, 761);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panelTop
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.panelTop, 2);
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.panelTop.Controls.Add(this.label1);
-            this.panelTop.Controls.Add(this.textBox1);
-            this.panelTop.Controls.Add(this.labelModulation);
-            this.panelTop.Controls.Add(this.comboBoxModulation);
-            this.panelTop.Controls.Add(this.button1);
-            this.panelTop.Controls.Add(this.label2);
-            this.panelTop.Controls.Add(this.textBoxDecoded);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelTop.Location = new System.Drawing.Point(3, 3);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1178, 64);
-            this.panelTop.TabIndex = 0;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -76,7 +40,7 @@ namespace ModulationTest
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 17);
+            this.label1.Size = new System.Drawing.Size(101, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Введите строку:";
             // 
@@ -99,7 +63,7 @@ namespace ModulationTest
             this.labelModulation.ForeColor = System.Drawing.Color.White;
             this.labelModulation.Location = new System.Drawing.Point(325, 23);
             this.labelModulation.Name = "labelModulation";
-            this.labelModulation.Size = new System.Drawing.Size(78, 17);
+            this.labelModulation.Size = new System.Drawing.Size(79, 17);
             this.labelModulation.TabIndex = 2;
             this.labelModulation.Text = "Модуляция:";
             // 
@@ -138,7 +102,7 @@ namespace ModulationTest
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(675, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 17);
+            this.label2.Size = new System.Drawing.Size(158, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Декодированный сигнал:";
             // 
@@ -215,6 +179,42 @@ namespace ModulationTest
             this.chartVisual3.Size = new System.Drawing.Size(760, 405);
             this.chartVisual3.TabIndex = 9;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel1.Controls.Add(this.panelTop, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.chartVisual1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.chartVisual2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.chartVisual3, 1, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1184, 761);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panelTop
+            // 
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.tableLayoutPanel1.SetColumnSpan(this.panelTop, 2);
+            this.panelTop.Controls.Add(this.label1);
+            this.panelTop.Controls.Add(this.textBox1);
+            this.panelTop.Controls.Add(this.labelModulation);
+            this.panelTop.Controls.Add(this.comboBoxModulation);
+            this.panelTop.Controls.Add(this.button1);
+            this.panelTop.Controls.Add(this.label2);
+            this.panelTop.Controls.Add(this.textBoxDecoded);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelTop.Location = new System.Drawing.Point(3, 3);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(1178, 64);
+            this.panelTop.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -226,7 +226,7 @@ namespace ModulationTest
             this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Анализ модуляции сигнала (Dark Theme)";
+            this.Text = "Анализ модуляции сигнала";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();

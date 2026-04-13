@@ -1,18 +1,14 @@
-﻿using AI.ML.Clustering;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
-namespace AI.SignalLab.Modulation.ModulationTypeDetector
+namespace AI.SignalLab.Modulation.ModulationTypeDetector;
+
+[Serializable]
+public class DigitalModulationDetector
 {
-    [Serializable]
-    public class DigitalModulationDetector
-    {
-        int _maxBits;
+    int _maxBits;
 
-        public DigitalModulationDetector(int maxBits) 
-        {
-            _maxBits= maxBits;
-        }
+    public DigitalModulationDetector(int maxBits) 
+    {
+        _maxBits= maxBits;
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QAM8.Properties
+namespace AGC.Properties
 {
 
 

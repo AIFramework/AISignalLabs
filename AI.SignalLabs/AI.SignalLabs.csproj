@@ -1,14 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>12</LangVersion>
     <AssemblyName>AI.SignalLab</AssemblyName>
     <RootNamespace>AI.SignalLab</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\AIFrameworkOpen\src\AI.DSP\AI.DSP.csproj" />
-    <ProjectReference Include="..\..\AIFrameworkOpen\src\AICrossPlatform\AICrossPlatform.csproj" />
+    <ProjectReference Include="..\..\C#\AIFrameworkOpen\src\AI.DSP\AI.DSP.csproj" />
+    <ProjectReference Include="..\..\C#\AIFrameworkOpen\src\AI\AI.csproj" />
   </ItemGroup>
 
 </Project>

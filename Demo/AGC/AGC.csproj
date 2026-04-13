@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8466D8B9-1231-4C44-A065-56328870D7C8}</ProjectGuid>
+    <ProjectGuid>{D8353D1F-296C-4B74-AB57-E53B245B7B35}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ModulationTest</RootNamespace>
-    <AssemblyName>ModulationTest</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <RootNamespace>AGC</RootNamespace>
+    <AssemblyName>AGC</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -54,9 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -80,15 +77,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AIFrameworkOpen\src\AIChartCV\AIChartCV.csproj">
+    <ProjectReference Include="..\..\..\C#\AIFrameworkOpen\src\AIChartCV\AIChartCV.csproj">
       <Project>{2ed3435f-f827-41e2-82b4-ed781a16b156}</Project>
       <Name>AIChartCV</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\AIFrameworkOpen\src\AICrossPlatform\AICrossPlatform.csproj">
-      <Project>{baaae403-08b6-40b6-aa9f-8532ff8eae63}</Project>
-      <Name>AICrossPlatform</Name>
+    <ProjectReference Include="..\..\..\C#\AIFrameworkOpen\src\AI\AI.csproj">
+      <Project>{dd2ef0d2-56c6-420f-b6dc-8dcacc9d5d07}</Project>
+      <Name>AI</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AI.SignalLabs\AI.SignalLabs.csproj">
+    <ProjectReference Include="..\..\AI.SignalLabs\AI.SignalLabs.csproj">
       <Project>{1e7c8e03-0322-4e8d-afa8-04f99b52d1c4}</Project>
       <Name>AI.SignalLabs</Name>
     </ProjectReference>
